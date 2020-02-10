@@ -129,5 +129,5 @@ koupons = [
       {:item => "BEER", :num => 2, :cost => 20.00},
       {:item => "CHEESE", :num => 3, :cost => 15.00}
     ]
-checkout(kart, koupons)
+
 
