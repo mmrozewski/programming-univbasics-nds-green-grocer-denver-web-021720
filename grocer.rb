@@ -85,8 +85,7 @@ fart = [
   {:item => "SOY MILK", :price => 4.50, :clearance => true,  :count => 1}
 ]
 
-x = apply_clearance(fart)
-puts x
+apply_clearance(fart)
 
 def checkout(cart, coupons)
   # Consult README for inputs and outputs
