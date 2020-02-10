@@ -1,26 +1,76 @@
 def find_item_by_name_in_collection(name, collection)
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
+  
+  index = 0
+  
+  while index < collection.length do
+    if collection[index][:item] == name
+      return collection[index]
+    end 
+    collection[index]
+    index += 1
+  end
+  nil 
 end
 
 def consolidate_cart(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+  
+  con_cart = []
+  index = 0
+  
+  while index < cart.length do
+    new_item_cart = find_item_by_name_in_collection(cart[index][:item], con_cart)
+    if new_item_cart
+      new_item_cart[:count] += 1
+    else
+      new_item_cart = {
+        :item => cart[index][:item],
+        :price => cart[index][:price],
+        :clearance => cart[index][:clearance],
+        :count => 1
+      }
+      con_cart << new_item_cart
+    end
+    index += 1
+  end
+  con_cart
 end
 
 def apply_coupons(cart, coupons)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+  
+  couponed_goods = []
+  index = 0 
+  
+  while index < coupons.length do
+    item = find_item_by_name_in_collection(coupons[index][:item], cart)
+    couponed_item = "#{coupons[index][:item]} W/COUPON"
+    item_w_coupon_cart = find_item_by_name_in_collection(couponed_item, cart)
+    if item && item[:count] >= coupons[index][:num]
+      if item_w_coupon_cart
+        item_w_coupon_cart[:count] += coupons[index][:num]
+        item[:count] -= coupons[index][:num]
+      
+      else
+        item_w_coupon_cart = {
+          :item => couponed_item,
+          :price => coupons[index][:cost] / coupons[index][:num],
+          :clearance => item[:clearance],
+          :count => coupons[index][:num]
+        }
+        
+        cart << item_w_coupon_cart
+        item[:count] -= coupons[index][:num]
+        
+      end
+    end
+    index += 1 
+  end
+  cart
 end
 
 def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+  index = 0
+  while index < cart.length do
+    
 end
 
 def checkout(cart, coupons)
