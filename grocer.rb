@@ -86,7 +86,11 @@ fart = [
 
 x = apply_clearance(fart)
 puts fart[0][:clearance]
-puts fart[0][:price] * 0.8.round(2)
+m = fart[0][:price] * 0.8
+m.round(2)
+puts m 
+y = fart[0][:price] * 0.8.round(2)
+puts y
 
 puts x
 
