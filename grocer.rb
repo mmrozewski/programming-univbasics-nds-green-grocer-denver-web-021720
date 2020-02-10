@@ -81,6 +81,7 @@ end
 def checkout(cart, coupons)
   
   mint_fresh_cart = apply_clearance(apply_coupons(consolidate_cart(cart)))
+  puts mint_fresh_cart
   young_money_cash_money = 0
   index = 0
   
@@ -107,3 +108,6 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
 end
+
+kart = 
+koupons = 
