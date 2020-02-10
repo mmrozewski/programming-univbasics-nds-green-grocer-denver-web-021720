@@ -72,7 +72,6 @@ def apply_clearance(cart)
   while index < cart.length do
     if cart[index][:clearance]
       (cart[index][:price] *= 0.8).round(2)
-      
     end
     index += 1
   end 
@@ -85,7 +84,7 @@ fart = [
   {:item => "SOY MILK", :price => 4.50, :clearance => true,  :count => 1}
 ]
 
-apply_clearance(fart)
+puts apply_clearance(fart)
 
 def checkout(cart, coupons)
   # Consult README for inputs and outputs
