@@ -80,8 +80,18 @@ end
 
 def checkout(cart, coupons)
   
-  float cash_money = 0
-  such_fresh_cart = apply_clearance(apply_coupons(consolidate_cart(cart)))
+  mint_fresh_cart = apply_clearance(apply_coupons(consolidate_cart(cart)))
+  young_money_cash_money = 0
+  index = 0
+  
+  while index < mint_fresh_cart.length do
+    young_money_cash_money += mint_fresh_cart[index][:price] * mint_fresh_cart[index][:count]
+  end 
+  
+  mint_fresh_cart
+  
+  
+  
   # Consult README for inputs and outputs
   #
   # This method should call
