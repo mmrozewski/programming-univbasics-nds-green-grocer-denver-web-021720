@@ -80,6 +80,7 @@ end
 
 def checkout(cart, coupons)
   
+  float cash_money = 0
   such_fresh_cart = apply_clearance(apply_coupons(consolidate_cart(cart)))
   # Consult README for inputs and outputs
   #
