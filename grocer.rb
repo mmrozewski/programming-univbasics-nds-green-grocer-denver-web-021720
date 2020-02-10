@@ -85,6 +85,7 @@ fart = [
 ]
 
 x = apply_clearance(fart)
+puts fart[0][:clearance]
 
 puts x
 
