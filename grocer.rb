@@ -94,7 +94,7 @@ def checkout(cart, coupons)
     young_money_cash_money * 0.9
   else
     young_money_cash_money
-  
+  end
   
   
   # Consult README for inputs and outputs
