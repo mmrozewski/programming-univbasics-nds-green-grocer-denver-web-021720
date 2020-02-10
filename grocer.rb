@@ -77,15 +77,7 @@ def apply_clearance(cart)
   end 
   cart
 end
-=begin
-fart = [
-  {:item => "PEANUT BUTTER", :price => 3.00, :clearance => true,  :count => 2},
-  {:item => "KALE", :price => 3.00, :clearance => false, :count => 3},
-  {:item => "SOY MILK", :price => 4.50, :clearance => true,  :count => 1}
-]
 
-puts apply_clearance(fart)
-=end
 def checkout(cart, coupons)
   # Consult README for inputs and outputs
   #
