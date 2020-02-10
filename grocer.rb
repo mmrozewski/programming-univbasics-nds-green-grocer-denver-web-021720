@@ -90,7 +90,10 @@ def checkout(cart, coupons)
     index += 1
   end 
   
-  young_money_cash_money
+  if young_money_cash_money > 100
+    young_money_cash_money * 0.9
+  else
+    young_money_cash_money
   
   
   
