@@ -80,7 +80,10 @@ end
 
 def checkout(cart, coupons)
   
-  mint_fresh_cart = apply_clearance(apply_coupons(consolidate_cart(cart)))
+  consolidated_cart = consolidate_cart(cart)
+  couponed_cart = apply_coupons(consolidated_cart)
+  mint_fresh_cart = apply_clearance(couponed_cart)
+  
   puts mint_fresh_cart
   young_money_cash_money = 0
   index = 0
