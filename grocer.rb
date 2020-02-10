@@ -77,7 +77,7 @@ def apply_clearance(cart)
   end 
   cart
 end
-
+=begin
 fart = [
   {:item => "PEANUT BUTTER", :price => 3.00, :clearance => true,  :count => 2},
   {:item => "KALE", :price => 3.00, :clearance => false, :count => 3},
@@ -85,7 +85,7 @@ fart = [
 ]
 
 puts apply_clearance(fart)
-
+=end
 def checkout(cart, coupons)
   # Consult README for inputs and outputs
   #
