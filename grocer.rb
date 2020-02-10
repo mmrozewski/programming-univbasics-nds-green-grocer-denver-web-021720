@@ -90,7 +90,7 @@ def checkout(cart, coupons)
     index += 1
   end 
   
-  mint_fresh_cart
+  young_money_cash_money
   
   
   
