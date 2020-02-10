@@ -86,6 +86,8 @@ def checkout(cart, coupons)
   
   while index < mint_fresh_cart.length do
     young_money_cash_money += mint_fresh_cart[index][:price] * mint_fresh_cart[index][:count]
+    
+    index += 1
   end 
   
   mint_fresh_cart
