@@ -121,4 +121,10 @@ kart = [
       {:item => "BEETS", :price => 2.50, :clearance => false},
       {:item => "SOY MILK", :price => 4.50, :clearance => true}
     ]
-koupons = 
+koupons = [
+      {:item => "AVOCADO", :num => 2, :cost => 5.00},
+      {:item => "BEER", :num => 2, :cost => 20.00},
+      {:item => "CHEESE", :num => 3, :cost => 15.00}
+    ]
+checkout(kart, koupons)
+
